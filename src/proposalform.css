@@ -1,0 +1,73 @@
+.right-sidebar {
+    position: absolute;
+    right: 0;
+    top: 55%;
+    transform: translateY(-50%);
+    width: 300px;
+    padding: 2rem 1.5rem;
+    background: rgba(4, 12, 25, 0.95); /* Semi-transparent dark blue */
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    height: 80vh;
+    overflow-y: auto;
+    z-index: 100;
+  }
+  
+  .proposal-form-vertical {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .proposal-form-vertical h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: white;
+  }
+  
+  .tagline {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .vertical-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    flex-grow: 1;
+  }
+  
+  .service-option {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .service-option:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .service-option.selected {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+  }
+  
+  .service-option input {
+    margin-right: 1rem;
+    accent-color: white;
+  }
+  
+  @media (max-width: 992px) {
+
+  .right-sidebar{
+    top: 1000px;
+    left: 0px;
+  }
+  }
