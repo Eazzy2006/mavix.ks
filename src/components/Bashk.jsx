@@ -21,6 +21,10 @@ export default function Bashk() {
     return () => clearInterval(timer);
   }, []);
 
+  // DEBUG: Add this to verify the image path
+  const imagePath = process.env.PUBLIC_URL + '/mavix-enhanced.png';
+  console.log('Image path:', imagePath);
+
   return (
     <div style={{
       display: 'flex',
@@ -91,18 +95,19 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section - THIS IS THE CRITICAL FIX */}
+      {/* Image section - UPDATED WITH DEBUGGING */}
       <div style={{
           width: '50%',
           position: 'relative',
           zIndex: 1,
-          transition: 'transform 0.5s ease'
+          transition: 'transform 0.5s ease',
+          backgroundColor: '#ff000020' // Debug background
         }}
         onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
         onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
       >
         <img 
-          src="/mavix-enhanced.png" {/* Changed to .png */}
+          src={imagePath}
           alt="Collaborations" 
           style={{
             width: '100%',
@@ -110,19 +115,17 @@ export default function Bashk() {
             filter: 'grayscale(20%) contrast(110%)',
             boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',
             transition: 'all 0.5s ease',
-            cursor: 'pointer'
+            cursor: 'pointer',
+            border: '2px dashed red' // Debug border
           }}
           onError={(e) => {
-            console.error('Image failed to load!');
-            e.target.style.border = '2px solid red'; // Visual debug
+            console.error('IMAGE FAILED TO LOAD:', e.target.src);
+            e.target.style.border = '3px solid red';
+            e.target.style.backgroundColor = '#ff000030';
           }}
-          onMouseEnter={e => {
-            e.currentTarget.style.filter = 'grayscale(0%) contrast(120%)';
-            e.target.style.boxShadow = '0 30px 60px -10px rgba(0,0,0,0.3)';
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.filter = 'grayscale(20%) contrast(110%)';
-            e.target.style.boxShadow = '0 25px 50px -12px rgba(0,0,0,0.25)';
+          onLoad={(e) => {
+            console.log('IMAGE LOADED SUCCESSFULLY');
+            e.target.style.border = '2px solid green';
           }}
         />
       </div>
