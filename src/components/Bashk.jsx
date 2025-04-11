@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
-import banner from "../images/mavix-enhanced.jpeg";
 
 export default function Bashk() {
-  // Animated counter state
   const [count, setCount] = useState(0);
   
   useEffect(() => {
     const target = 100;
-    const duration = 4500; // 1.5 second animation
+    const duration = 4500;
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
@@ -32,11 +30,11 @@ export default function Bashk() {
       borderTop: '1px solid rgba(255,255,255,0.2)',
       borderBottom: '1px solid rgba(255,255,255,0.2)',
       color: 'white',
-      marginTop:'150px',
+      marginTop: '150px',
       background: 'transparent',
       position: 'relative',
       overflow: 'hidden'
-    }} className="bashki">
+    }}>
       {/* Glow effect */}
       <div style={{
         position: 'absolute',
@@ -49,11 +47,7 @@ export default function Bashk() {
       }}></div>
 
       {/* Text section */}
-      <div style={{
-        width: '45%',
-        position: 'relative',
-        zIndex: 1
-      }}>
+      <div style={{ width: '45%', position: 'relative', zIndex: 1 }}>
         <h2 style={{
           fontSize: 'clamp(1.5rem, 3vw, 3rem)',
           fontWeight: 300,
@@ -97,39 +91,16 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section with hover effects */}
-      <div 
-        style={{
-          width: '50%',
-          position: 'relative',
-          zIndex: 1,
-          transition: 'transform 0.5s ease'
-        }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-10px)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-        }}
-      >
+      {/* Image section - SIMPLIFIED WORKING VERSION */}
+      <div style={{ width: '50%', position: 'relative', zIndex: 1 }}>
         <img 
-          src={banner} 
+          src="/mavix-enhanced.png" 
           alt="Collaborations" 
           style={{
             width: '100%',
             height: 'auto',
             filter: 'grayscale(20%) contrast(110%)',
-            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)',
-            transition: 'all 0.5s ease',
-            cursor: 'pointer'
-          }}
-          onMouseEnter={e => {
-            e.currentTarget.style.filter = 'grayscale(0%) contrast(120%)';
-            e.currentTarget.style.boxShadow = '0 30px 60px -10px rgba(0,0,0,0.3)';
-          }}
-          onMouseLeave={e => {
-            e.currentTarget.style.filter = 'grayscale(20%) contrast(110%)';
-            e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0,0,0,0.25)';
+            boxShadow: '0 25px 50px -12px rgba(0,0,0,0.25)'
           }}
         />
       </div>
