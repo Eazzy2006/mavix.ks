@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import banner from "/images/mavix-enhanced.jpeg";
 
 export default function Bashk() {
   // Animated counter state
@@ -7,7 +6,7 @@ export default function Bashk() {
   
   useEffect(() => {
     const target = 100;
-    const duration = 4500; // 1.5 second animation
+    const duration = 4500; // 4.5 second animation
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
@@ -32,7 +31,7 @@ export default function Bashk() {
       borderTop: '1px solid rgba(255,255,255,0.2)',
       borderBottom: '1px solid rgba(255,255,255,0.2)',
       color: 'white',
-      marginTop:'150px',
+      marginTop: '150px',
       background: 'transparent',
       position: 'relative',
       overflow: 'hidden'
@@ -113,7 +112,7 @@ export default function Bashk() {
         }}
       >
         <img 
-          src={banner} 
+          src="/mavix-enhanced.jpeg"  {/* Changed to public path */}
           alt="Collaborations" 
           style={{
             width: '100%',
