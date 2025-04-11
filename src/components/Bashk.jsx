@@ -34,7 +34,7 @@ export default function Bashk() {
       background: 'transparent',
       position: 'relative',
       overflow: 'hidden'
-    }} className="bashki">
+    }}>
       {/* Glow effect */}
       <div style={{
         position: 'absolute',
@@ -95,7 +95,7 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section - ONLY CHANGE WAS HERE */}
+      {/* Image section - ONLY CHANGE IS THE SRC PATH */}
       <div 
         style={{
           width: '50%',
@@ -103,15 +103,11 @@ export default function Bashk() {
           zIndex: 1,
           transition: 'transform 0.5s ease'
         }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-10px)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-        }}
+        onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
+        onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
       >
         <img 
-          src="/mavix-enhanced.png" {/* Only changed this line */}
+          src="/mavix-enhanced.png" {/* This is the only changed line */}
           alt="Collaborations" 
           style={{
             width: '100%',
@@ -128,10 +124,6 @@ export default function Bashk() {
           onMouseLeave={e => {
             e.currentTarget.style.filter = 'grayscale(20%) contrast(110%)';
             e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0,0,0,0.25)';
-          }}
-          onError={(e) => {
-            console.error('Image failed to load');
-            e.target.style.border = '2px solid red';
           }}
         />
       </div>
