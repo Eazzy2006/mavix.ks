@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 export default function Bashk() {
-  // Animated counter state
   const [count, setCount] = useState(0);
   
   useEffect(() => {
     const target = 100;
-    const duration = 4500; // 4.5 second animation
+    const duration = 4500;
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
@@ -35,7 +34,7 @@ export default function Bashk() {
       background: 'transparent',
       position: 'relative',
       overflow: 'hidden'
-    }} className="bashki">
+    }}>
       {/* Glow effect */}
       <div style={{
         position: 'absolute',
@@ -48,11 +47,7 @@ export default function Bashk() {
       }}></div>
 
       {/* Text section */}
-      <div style={{
-        width: '45%',
-        position: 'relative',
-        zIndex: 1
-      }}>
+      <div style={{ width: '45%', position: 'relative', zIndex: 1 }}>
         <h2 style={{
           fontSize: 'clamp(1.5rem, 3vw, 3rem)',
           fontWeight: 300,
@@ -96,23 +91,18 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section with hover effects */}
-      <div 
-        style={{
+      {/* Image section - KEY CHANGE HERE */}
+      <div style={{
           width: '50%',
           position: 'relative',
           zIndex: 1,
           transition: 'transform 0.5s ease'
         }}
-        onMouseEnter={e => {
-          e.currentTarget.style.transform = 'translateY(-10px)';
-        }}
-        onMouseLeave={e => {
-          e.currentTarget.style.transform = 'translateY(0)';
-        }}
+        onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
+        onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
       >
         <img 
-          src="/mavix-enhanced.jpeg"  {/* Changed to public path */}
+          src="/mavix-enhanced.jpeg" {/* Changed to root path */}
           alt="Collaborations" 
           style={{
             width: '100%',
