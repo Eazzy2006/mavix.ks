@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Image Test</h1>
+  <img src="/mavix-enhanced.png" alt="Test" style="width: 100%">
+  <p>Open browser console (F12) to see if image loaded</p>
+  <script>
+    document.querySelector('img').onload = () => console.log('IMAGE LOADED!');
+    document.querySelector('img').onerror = () => console.log('IMAGE FAILED!');
+  </script>
+</body>
+</html>
