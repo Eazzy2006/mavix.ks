@@ -102,7 +102,7 @@ export default function Bashk() {
         onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
       >
         <img 
-          src="/mavix-enhanced.jpeg" {/* Changed to root path */}
+          src="/mavix-enhanced.png" {/* Changed to root path */}
           alt="Collaborations" 
           style={{
             width: '100%',
