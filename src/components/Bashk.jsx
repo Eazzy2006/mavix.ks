@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import banner from "../images/mavix-enhanced.jpeg"; // Keeping original import
+import banner from "../images/mavix-enhanced.jpeg";
 
 export default function Bashk() {
+  // Animated counter state
   const [count, setCount] = useState(0);
   
   useEffect(() => {
     const target = 100;
-    const duration = 4500;
+    const duration = 4500; // 1.5 second animation
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
@@ -35,7 +36,7 @@ export default function Bashk() {
       background: 'transparent',
       position: 'relative',
       overflow: 'hidden'
-    }}>
+    }} className="bashki">
       {/* Glow effect */}
       <div style={{
         position: 'absolute',
@@ -96,7 +97,7 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section - FULLY ORIGINAL WITH WORKING IMPORT */}
+      {/* Image section with hover effects */}
       <div 
         style={{
           width: '50%',
@@ -104,11 +105,15 @@ export default function Bashk() {
           zIndex: 1,
           transition: 'transform 0.5s ease'
         }}
-        onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
-        onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+        onMouseEnter={e => {
+          e.currentTarget.style.transform = 'translateY(-10px)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.transform = 'translateY(0)';
+        }}
       >
         <img 
-          src={banner}
+          src={banner} 
           alt="Collaborations" 
           style={{
             width: '100%',
