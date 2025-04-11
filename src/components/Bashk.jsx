@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import banner from "../images/mavix-enhanced.jpeg";
+import banner from "./images/mavix-enhanced.jpeg";
 
 export default function Bashk() {
   // Animated counter state
