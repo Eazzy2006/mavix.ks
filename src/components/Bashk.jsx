@@ -91,7 +91,7 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section - KEY CHANGE HERE */}
+      {/* Image section - THIS IS THE CRITICAL FIX */}
       <div style={{
           width: '50%',
           position: 'relative',
@@ -102,7 +102,7 @@ export default function Bashk() {
         onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
       >
         <img 
-          src="/mavix-enhanced.png" {/* Changed to root path */}
+          src="/mavix-enhanced.png" {/* Changed to .png */}
           alt="Collaborations" 
           style={{
             width: '100%',
@@ -112,13 +112,17 @@ export default function Bashk() {
             transition: 'all 0.5s ease',
             cursor: 'pointer'
           }}
+          onError={(e) => {
+            console.error('Image failed to load!');
+            e.target.style.border = '2px solid red'; // Visual debug
+          }}
           onMouseEnter={e => {
             e.currentTarget.style.filter = 'grayscale(0%) contrast(120%)';
-            e.currentTarget.style.boxShadow = '0 30px 60px -10px rgba(0,0,0,0.3)';
+            e.target.style.boxShadow = '0 30px 60px -10px rgba(0,0,0,0.3)';
           }}
           onMouseLeave={e => {
             e.currentTarget.style.filter = 'grayscale(20%) contrast(110%)';
-            e.currentTarget.style.boxShadow = '0 25px 50px -12px rgba(0,0,0,0.25)';
+            e.target.style.boxShadow = '0 25px 50px -12px rgba(0,0,0,0.25)';
           }}
         />
       </div>
