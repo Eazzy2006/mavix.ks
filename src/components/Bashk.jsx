@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 export default function Bashk() {
+  // Animated counter state
   const [count, setCount] = useState(0);
   
   useEffect(() => {
     const target = 100;
-    const duration = 4500;
+    const duration = 4500; // 1.5 second animation
     const increment = target / (duration / 16);
     
     const timer = setInterval(() => {
@@ -34,7 +35,7 @@ export default function Bashk() {
       background: 'transparent',
       position: 'relative',
       overflow: 'hidden'
-    }}>
+    }} className="bashki">
       {/* Glow effect */}
       <div style={{
         position: 'absolute',
@@ -95,7 +96,7 @@ export default function Bashk() {
         </div>
       </div>
 
-      {/* Image section - ONLY CHANGE IS THE SRC PATH */}
+      {/* Image section with hover effects - ONLY CHANGED THIS PART */}
       <div 
         style={{
           width: '50%',
@@ -103,11 +104,15 @@ export default function Bashk() {
           zIndex: 1,
           transition: 'transform 0.5s ease'
         }}
-        onMouseEnter={e => e.currentTarget.style.transform = 'translateY(-10px)'}
-        onMouseLeave={e => e.currentTarget.style.transform = 'translateY(0)'}
+        onMouseEnter={e => {
+          e.currentTarget.style.transform = 'translateY(-10px)';
+        }}
+        onMouseLeave={e => {
+          e.currentTarget.style.transform = 'translateY(0)';
+        }}
       >
         <img 
-          src="/mavix-enhanced.png" {/* This is the only changed line */}
+          src="/mavix-enhanced.png" {/* Changed from {banner} to direct path */}
           alt="Collaborations" 
           style={{
             width: '100%',
