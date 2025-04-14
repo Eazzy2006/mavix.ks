@@ -57,19 +57,7 @@ const InteriorDesign = () => {
     sectionTitle: {
       fontSize: '2rem',
       marginBottom: '1.5rem',
-      color: '#ffffff',
-      position: 'relative',
-      paddingBottom: '0.5rem',
-      ':after': {
-        content: '""',
-        position: 'absolute',
-        bottom: '0',
-        left: '0',
-        width: '80px',
-        height: '4px',
-        background: 'linear-gradient(90deg, #00dbde 0%, #fc00ff 100%)',
-        borderRadius: '2px'
-      }
+      color: '#ffffff'
     },
     sectionText: {
       lineHeight: '1.8',
@@ -83,11 +71,7 @@ const InteriorDesign = () => {
       fontSize: '1.1rem',
       padding: '0.5rem 1rem',
       borderRadius: '5px',
-      transition: 'all 0.3s ease',
-      ':hover': {
-        background: 'rgba(255,255,255,0.1)',
-        transform: 'translateY(-2px)'
-      }
+      transition: 'all 0.3s ease'
     },
     projectGrid: {
       display: 'grid',
@@ -100,11 +84,7 @@ const InteriorDesign = () => {
       overflow: 'hidden',
       boxShadow: '0 8px 15px rgba(0,0,0,0.3)',
       transition: 'all 0.3s ease',
-      cursor: 'pointer',
-      ':hover': {
-        transform: 'translateY(-10px)',
-        boxShadow: '0 15px 30px rgba(0,0,0,0.4)'
-      }
+      cursor: 'pointer'
     },
     projectImage: {
       width: '100%',
@@ -114,6 +94,11 @@ const InteriorDesign = () => {
     logoImg: {
       height: "100px",
       marginBottom: "1rem"
+    },
+    subtitle: {
+      fontSize: '1.3rem',
+      color: '#e6e6e6',
+      marginBottom: '1rem'
     }
   };
 
@@ -124,7 +109,7 @@ const InteriorDesign = () => {
     { id: 6, image: sm6 },
     { id: 8, image: sm8 },
     { id: 9, image: sm9 },
-    { id: 10, image: sm10 },
+    { id: 10, image: sm10 }
   ];
 
   const handleProjectClick = (image) => {
@@ -134,10 +119,35 @@ const InteriorDesign = () => {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <img 
-          src={logo} 
-          alt="Mavix Logo" 
-          style={styles.logoImg}
-        />
+        <img src={logo} alt="Mavix Logo" style={styles.logoImg} />
         <h1 className='idh1' style={styles.title}>Interior Design</h1>
-        <p style={styles.subtitle}>Mos prisni – hapësira juaj
+        <p style={styles.subtitle}>Mos prisni – hapësira juaj e ëndrrave është vetëm një dizajn larg.</p>
+      </header>
+
+      <nav style={styles.nav}>
+        <Link to="/" style={styles.navLink}>Kryefaqja</Link>
+        <Link to="/dashboard" style={styles.navLink}>Shërbimet</Link>
+        <Link to="/orders" style={styles.navLink}>Dëshmitë</Link>
+        <Link to="/products" style={styles.navLink}>Kontakt</Link>
+      </nav>
+
+      <section style={styles.section}>
+        <h2 style={styles.sectionTitle}>Portfolio Jonë e Dizajnit të Brendshëm</h2>
+        <p style={styles.sectionText}>
+          Ne krijojmë hapësira funksionale dhe estetike që pasqyrojnë stilin dhe nevojat e klientëve tanë.
+          Nga kuzhinat moderne deri te ambientet e banimit minimaliste – çdo projekt është unik.
+        </p>
+
+        <div style={styles.projectGrid}>
+          {projects.map((project) => (
+            <div key={project.id} style={styles.projectCard} onClick={() => handleProjectClick(project.image)}>
+              <img src={project.image} alt={`Project ${project.id}`} style={styles.projectImage} />
+            </div>
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default InteriorDesign;
