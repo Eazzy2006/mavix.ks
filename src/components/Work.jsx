@@ -50,7 +50,9 @@ export default function Work() {
       </h1>
 
       {/* Services grid - 2 rows of 3 */}
-      <div style={{
+      <div 
+      className="sherbimetcard"
+      style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(2, 1fr)',
         gap: '30px',
