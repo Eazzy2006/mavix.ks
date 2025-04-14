@@ -166,7 +166,7 @@ const Animations3D = () => {
         <h2 style={styles.sectionTitle}>Portfolio Jonë</h2>
         <div style={styles.projectGrid}>
           {projects.map((project) => (
-            <div key={project.id} style={styles.projectCard}>
+            <div className='cards3d' key={project.id} style={styles.projectCard}>
               <video 
                 controls 
                 style={styles.videoPlayer}
