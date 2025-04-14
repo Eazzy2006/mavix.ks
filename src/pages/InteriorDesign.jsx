@@ -2,20 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from "../images/mavix-transparent.png";
 import sm1 from "../images/interiordesign-examples/66737adf-55e9-4af2-a272-d60bce82ecb5.jpg";
-import sm2 from "../images/interiordesign-examples/IMG_6259 (1).jpg";
-import sm3 from "../images/interiordesign-examples/temp_image_2D4B6E4B-5303-400B-8A59-DB5AE0AB6EF0.jpg";
 import sm4 from "../images/interiordesign-examples/temp_image_31AF1D2C-A5EF-47DC-A344-DE9774592378.jpg";
 import sm5 from "../images/interiordesign-examples/temp_image_448E6A6F-B26D-4581-8EE0-0505A509537A.jpg";
 import sm6 from "../images/interiordesign-examples/temp_image_757BE74A-ACF4-4D58-ACB8-F484E447257E.jpg";
-import sm7 from "../images/interiordesign-examples/temp_image_6622D74E-1283-4F3B-BBCB-1797CFCF27CA.jpg";
 import sm8 from "../images/interiordesign-examples/temp_image_6622D74E-1283-4F3B-BBCB-1797CFCF27CA.jpg";
 import sm9 from "../images/interiordesign-examples/temp_image_6905A2A6-0CD5-4A63-8177-E7887EC050A3.jpg";
 import sm10 from "../images/interiordesign-examples/temp_image_53219DEC-D2B2-409F-B91F-C76CA956A3E7.jpg";
-
-
-
-
-// Import your actual project image
 
 const InteriorDesign = () => {
   const styles = {
@@ -125,15 +117,11 @@ const InteriorDesign = () => {
     }
   };
 
-  // Project data with imported images
   const projects = [
     { id: 1, image: sm1 },
-    { id: 2, image: sm2 },
-    { id: 3, image: sm3 },
     { id: 4, image: sm4 },
     { id: 5, image: sm5 },
     { id: 6, image: sm6 },
-    { id: 7, image: sm7 },
     { id: 8, image: sm8 },
     { id: 9, image: sm9 },
     { id: 10, image: sm10 },
@@ -152,41 +140,4 @@ const InteriorDesign = () => {
           style={styles.logoImg}
         />
         <h1 className='idh1' style={styles.title}>Interior Design</h1>
-        <p style={styles.subtitle}>Mos prisni – hapësira juaj ideale fillon KËTU dhe TANI!</p>
-      </header>
-
-      <nav style={styles.nav}>
-        <Link to="/" style={styles.navLink}>Kryefaqja</Link>
-        <Link to="/dashboard" style={styles.navLink}>Shërbimet</Link>
-        <Link to="/orders" style={styles.navLink}>Dëshmitë</Link>
-        <Link to="/products" style={styles.navLink}>Kontakt</Link>
-      </nav>
-
-      <section style={styles.section}>
-        <h2 style={styles.sectionTitle}>Si punojmë ne?</h2>
-        <p style={styles.sectionText}>
-        Ne krijojmë hapësira të frymëzuara, funksionale dhe të personalizuara që transformojnë ambientet në vende të rehatshme dhe stilore për jetën tuaj të përditshme.
-        </p>
-      </section>
-
-
-      <div style={styles.projectGrid}>
-        {projects.map((project) => (
-          <div 
-            key={project.id} 
-            style={styles.projectCard}
-            onClick={() => handleProjectClick(project.image)}
-          >
-            <img 
-              src={project.image} 
-              alt={`Project ${project.id}`} 
-              style={styles.projectImage}
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default InteriorDesign;
+        <p style={styles.subtitle}>Mos prisni – hapësira juaj
