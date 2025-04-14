@@ -4,8 +4,8 @@ import logo from "../images/mavix-transparent.png";
 import sm1 from "../images/logo-examples/logo 1-Picsart-AiImageEnhancer.png";
 import sm3 from "../images/logo-examples/logo 3-Picsart-AiImageEnhancer.png";
 import sm4 from "../images/logo-examples/logo 4-Picsart-AiImageEnhancer.png";
-import sm5 from "../images/logo-examples/logo 5-Picsart-AiImageEnhancer.png";
-import sm6 from "../images/logo-examples/logo 6-Picsart-AiImageEnhancer.png";
+import sm5 from "../images/logo-examples/EDI Mobileri Logo.jpeg";
+import sm6 from "../images/logo-examples/RM Dekor logo.jpeg";
 import sm7 from "../images/logo-examples/logo 7-Picsart-AiImageEnhancer.png";
 import sm8 from "../images/logo-examples/logo 9-Picsart-AiImageEnhancer.png";
 import sm9 from "../images/logo-examples/logo 10-Picsart-AiImageEnhancer.png";
@@ -131,8 +131,8 @@ const LogoDesign = () => {
     { id: 1, image: sm1, title: 'Modern Business Logo' },
     { id: 3, image: sm3, title: 'Minimalist Brand Mark' },
     { id: 4, image: sm4, title: 'Creative Agency Logo' },
-    { id: 5, image: sm5, title: 'Elegant Typography Logo' },
-    { id: 6, image: sm6, title: 'Abstract Symbol Design' },
+    { id: 5, image: sm5, title: 'EDI Mobileri Logo' },
+    { id: 6, image: sm6, title: 'RM Dekor Logo' },
     { id: 7, image: sm7, title: 'Vibrant Brand Identity' },
     { id: 8, image: sm8, title: 'Professional Corporate Logo' },
     { id: 9, image: sm9, title: 'Playful Character Logo' },
