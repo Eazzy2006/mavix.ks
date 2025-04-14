@@ -504,7 +504,10 @@ h1 {
   }
 
   .sherbimetcard{
-    margin-left: -30px;
+    margin-left: -25px;
   }
 
+  .testimonial-card{
+    margin-left: 25px;
+  }
 }
