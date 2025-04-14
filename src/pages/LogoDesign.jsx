@@ -170,6 +170,7 @@ const LogoDesign = () => {
         <div style={styles.projectGrid}>
           {projects.map((project) => (
             <div 
+            className='logocard'
               key={project.id} 
               style={styles.projectCard}
               onClick={() => window.open(project.image, '_blank')}

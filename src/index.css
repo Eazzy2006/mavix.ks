@@ -510,4 +510,13 @@ h1 {
   .testimonial-card{
     margin-left: 28px;
   }
+
+  .inticards{
+    margin-left: -20px;
+  }
+  
+  .logocard{
+    margin-left: -20px;
+  }
+  
 }

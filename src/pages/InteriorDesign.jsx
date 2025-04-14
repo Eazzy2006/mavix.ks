@@ -138,7 +138,7 @@ const InteriorDesign = () => {
           Nga kuzhinat moderne deri te ambientet e banimit minimaliste – çdo projekt është unik.
         </p>
 
-        <div style={styles.projectGrid}>
+        <div className='inticards' style={styles.projectGrid}>
           {projects.map((project) => (
             <div key={project.id} style={styles.projectCard} onClick={() => handleProjectClick(project.image)}>
               <img src={project.image} alt={`Project ${project.id}`} style={styles.projectImage} />
