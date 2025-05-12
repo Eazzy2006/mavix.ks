@@ -394,121 +394,94 @@ h1 {
 
 
 /* Mobile styles */
-/* Mobile styles */
-@media (max-width: 992px) {
-  html, body {
+@media (max-width: 768px) {
+  body, html {
     overflow-x: hidden;
-    width: 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
   }
 
   .navbar-toggler {
-    display: block !important;
-    position: relative;
-    left: 0;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 10px;
+    z-index: 1001;
   }
 
   .nav {
     position: absolute;
-    top: 80px; /* Adjust based on your logo height */
+    top: 70px;
     left: 0;
     right: 0;
-    background: #040C19; /* Match your navbar color */
+    background-color: #040C19;
     z-index: 1000;
-    padding: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 20px 0;
+    text-align: center;
   }
 
   .nav-item {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .nav-link {
-    padding: 10px 15px !important;
+    padding: 12px 0;
   }
 
   .logo-img {
-    position: relative;
-    top: 10px;
-    max-width: 150px;
-    height: auto;
+    max-width: 140px;
+    margin: 10px auto;
   }
 
   .line-1 {
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto 10px;
   }
 
   .pcover {
-    font-size: 14px;
-    text-align: center;
-    margin: 10px auto;
+    font-size: 15px;
     width: 90%;
+    text-align: center;
+    margin: 0 auto 20px;
   }
 
   .btn-40 {
     display: block;
-    margin: 20px auto;
-  }
-
-  .mobile {
-    display: block;
-  }
-
-  .work-section {
-    position: relative;
-    padding: 20px;
+    margin: 0 auto 30px;
   }
 
   .our {
-    font-size: 32px;
+    font-size: 28px;
     text-align: center;
-    margin-bottom: 20px;
   }
 
   .work-grid {
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    padding: 10px;
     align-items: center;
   }
 
   .read-more {
-    display: block;
-    margin: 20px auto;
+    margin: 0 auto;
   }
 
   .testimonial-container {
-    margin: 0 auto;
+    margin-left: 0;
     padding: 20px;
   }
 
   .testih1 {
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
-    margin-bottom: 20px;
-  }
-
-  .marquee-container {
-    overflow-x: auto;
-    white-space: nowrap;
-  }
-
-  .bashki {
-    position: relative;
-    top: 0;
-    background: transparent;
-    padding: 20px;
+    left: 0 !important;
   }
 
   .kontaktih1 {
-    font-size: 28px;
     text-align: center;
-    margin-bottom: 20px;
+    font-size: 28px;
+    left: 0 !important;
+  }
+
+  .bashki {
+    top: 0;
+    padding: 10px;
   }
 }
 
