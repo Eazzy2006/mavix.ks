@@ -395,16 +395,15 @@ h1 {
 
 /* Mobile styles */
 @media (max-width: 768px) {
-  body, html {
+  html, body {
     overflow-x: hidden;
-    padding: 0;
     margin: 0;
+    padding: 0;
   }
 
   .navbar-toggler {
     margin-left: auto;
     margin-right: 10px;
-    z-index: 1001;
   }
 
   .nav {
@@ -470,13 +469,11 @@ h1 {
   .testih1 {
     font-size: 32px;
     text-align: center;
-    left: 0 !important;
   }
 
   .kontaktih1 {
     text-align: center;
     font-size: 28px;
-    left: 0 !important;
   }
 
   .bashki {
