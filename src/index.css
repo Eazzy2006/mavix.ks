@@ -394,25 +394,26 @@ h1 {
 
 
 /* Mobile styles */
+/* Mobile styles */
 @media (max-width: 992px) {
-
-    html, body {
+  html, body {
     overflow-x: hidden;
     width: 100%;
-    position: relative;
+    margin: 0;
+    padding: 0;
   }
 
-  
   .navbar-toggler {
     display: block !important;
     position: relative;
-    left: -50px;
-
+    left: 0;
+    margin-left: auto;
+    margin-right: 20px;
   }
-  
+
   .nav {
     position: absolute;
-    top: 120px; /* Adjust based on your logo height */
+    top: 80px; /* Adjust based on your logo height */
     left: 0;
     right: 0;
     background: #040C19; /* Match your navbar color */
@@ -420,103 +421,94 @@ h1 {
     padding: 20px;
     border-top: 1px solid rgba(255,255,255,0.1);
   }
-  
+
   .nav-item {
     padding: 10px 0;
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
-  
+
   .nav-link {
     padding: 10px 15px !important;
   }
 
-  .logo-img{
+  .logo-img {
+    position: relative;
     top: 10px;
+    max-width: 150px;
+    height: auto;
   }
 
-  .line-1{
-    font-size: 54px;
-    left: -95px;
+  .line-1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 0 auto;
   }
 
-  .pcover{
-    font-size: 15px;
-    left: -90px;
-    width: 270px;
-    position: relative;
+  .pcover {
+    font-size: 14px;
+    text-align: center;
+    margin: 10px auto;
+    width: 90%;
   }
 
-  .btn-40{
-    position: relative;
-    top: 30px;
+  .btn-40 {
+    display: block;
+    margin: 20px auto;
   }
 
-  .mobile{
+  .mobile {
     display: block;
   }
 
-  .work-section{
+  .work-section {
     position: relative;
+    padding: 20px;
   }
 
-  .our{
-    font-size: 50px;
-    position: relative;
-    left: -10px;
+  .our {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  .work-grid{
-    position: relative;
-    left: -15px;
+  .work-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .read-more{
-    position: relative;
-    left: 55px;
-  }
-  .testimonial-container{
-      margin-left: -50px;
+  .read-more {
+    display: block;
+    margin: 20px auto;
   }
 
-  .testih1{
-    position: relative;
-    left: -520px;
-    font-size: 60px;
+  .testimonial-container {
+    margin: 0 auto;
+    padding: 20px;
   }
 
-  .marquee-container{
-    position: relative;
+  .testih1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
-  .bashki{
+  .marquee-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .bashki {
     position: relative;
-    top: -180px;
+    top: 0;
     background: transparent;
+    padding: 20px;
   }
 
-  .kontaktih1{
-    position: relative;
-    left: -300px;
+  .kontaktih1 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
   }
-
-  .cards3d{
-    margin-left: -90px;
-  }
-
-  .sherbimetcard{
-    margin-left: -25px;
-  }
-
-  .testimonial-card{
-    margin-left: 28px;
-  }
-
-  .inticards{
-    margin-left: -20px;
-  }
-  
-  .logocard{
-    margin-left: -20px;
-  }
-  
 }
+
