@@ -406,7 +406,7 @@ h1 {
   .navbar-toggler {
     display: block !important;
     position: relative;
-    left: -40px;
+    left: -25px;
 
   }
   
@@ -436,12 +436,12 @@ h1 {
 
   .line-1{
     font-size: 54px;
-    left: -55px;
+    left: -35px;
   }
 
   .pcover{
     font-size: 15px;
-    left: -50px;
+    left: -30px;
     width: 270px;
     position: relative;
   }
