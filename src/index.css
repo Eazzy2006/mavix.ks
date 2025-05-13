@@ -394,7 +394,6 @@ h1 {
 
 
 /* Mobile styles */
-/* Mobile styles */
 @media (max-width: 992px) {
 
     html, body {
@@ -407,7 +406,7 @@ h1 {
   .navbar-toggler {
     display: block !important;
     position: relative;
-    left: -100px;
+    left: -60px;
 
   }
   
@@ -437,12 +436,12 @@ h1 {
 
   .line-1{
     font-size: 54px;
-    left: -95px;
+    left: -75px;
   }
 
   .pcover{
     font-size: 15px;
-    left: -90px;
+    left: -70px;
     width: 270px;
     position: relative;
   }
