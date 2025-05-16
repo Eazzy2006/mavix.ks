@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 export default function Bashk() {
   const [count, setCount] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // Count animation
+  // Animate count
   useEffect(() => {
     const target = 100;
     const duration = 4500;
@@ -23,9 +23,12 @@ export default function Bashk() {
     return () => clearInterval(timer);
   }, []);
 
-  // Mobile detection
+  // Detect mobile
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    handleResize(); // Set on mount
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -46,68 +49,93 @@ export default function Bashk() {
         position: 'relative',
         overflow: 'hidden',
         background: isMobile
-          ? 'url("/mavix-enhanced.png") center/cover no-repeat'
+          ? 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("/mavix-enhanced.png") center 30% / cover no-repeat'
           : 'transparent'
       }}
     >
       {/* Optional Glow */}
-      <div style={{
-        position: 'absolute',
-        top: '-50%',
-        left: '30%',
-        width: '500px',
-        height: '500px',
-        background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%)',
-        zIndex: 0
-      }}></div>
+      <div
+        style={{
+          position: 'absolute',
+          top: '-50%',
+          left: '30%',
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%)',
+          zIndex: 0
+        }}
+      ></div>
 
-      {/* Text Section */}
-      <div style={{ width: isMobile ? '100%' : '45%', position: 'relative', zIndex: 1, textAlign: isMobile ? 'center' : 'left' }}>
-        <h2 style={{
-          fontSize: 'clamp(1.5rem, 3vw, 3rem)',
-          fontWeight: 300,
-          margin: '0 0 20px 0',
-          lineHeight: 1.3,
-          letterSpacing: '1px'
-        }}>
+      {/* Text Content */}
+      <div
+        style={{
+          width: isMobile ? '100%' : '45%',
+          position: 'relative',
+          zIndex: 1,
+          textAlign: isMobile ? 'center' : 'left'
+        }}
+      >
+        <h2
+          style={{
+            fontSize: 'clamp(1.5rem, 3vw, 3rem)',
+            fontWeight: 300,
+            margin: '0 0 20px 0',
+            lineHeight: 1.3,
+            letterSpacing: '1px'
+          }}
+        >
           {count}+ BASHKËPUNIME <br />
           ME KOMPANI TË NDRYSHME
         </h2>
 
-        <p style={{
-          fontSize: '1rem',
-          opacity: 0.8,
-          margin: '0 0 30px 0',
-          fontStyle: 'italic'
-        }}>
+        <p
+          style={{
+            fontSize: '1rem',
+            opacity: 0.8,
+            margin: '0 0 30px 0',
+            fontStyle: 'italic'
+          }}
+        >
           Dhe numri vazhdon të rritet
         </p>
 
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '20px',
-          justifyContent: isMobile ? 'center' : 'flex-start'
-        }}>
-          <div style={{
-            height: '1px',
-            width: '50px',
-            background: 'white'
-          }}></div>
-          <span style={{
-            fontFamily: '"Helvetica Neue", sans-serif',
-            fontWeight: 300,
-            letterSpacing: '3px',
-            fontSize: '0.8rem'
-          }}>MAVIX</span>
-          <span style={{
-            opacity: 0.5,
-            fontSize: '0.8rem'
-          }}>NEXT — GEN</span>
+        <div
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '20px',
+            justifyContent: isMobile ? 'center' : 'flex-start'
+          }}
+        >
+          <div
+            style={{
+              height: '1px',
+              width: '50px',
+              background: 'white'
+            }}
+          ></div>
+          <span
+            style={{
+              fontFamily: '"Helvetica Neue", sans-serif',
+              fontWeight: 300,
+              letterSpacing: '3px',
+              fontSize: '0.8rem'
+            }}
+          >
+            MAVIX
+          </span>
+          <span
+            style={{
+              opacity: 0.5,
+              fontSize: '0.8rem'
+            }}
+          >
+            NEXT — GEN
+          </span>
         </div>
       </div>
 
-      {/* Image Section (hidden on mobile) */}
+      {/* Image (only on desktop) */}
       {!isMobile && (
         <div style={{ width: '50%', position: 'relative', zIndex: 1 }}>
           <img
