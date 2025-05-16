@@ -22,7 +22,7 @@ export default function Bashk() {
   }, []);
 
   return (
-    <div style={{
+    <div className="bashki" style={{
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'space-between',
