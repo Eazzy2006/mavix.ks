@@ -7,7 +7,6 @@ import sm3 from "../images/threed-examples/Professional_Mode_Create_a_seamless_c
 import sm4 from "../images/threed-examples/Professional_Mode_Gradually__the_scene_transforms_ (2).mp4";
 import sm5 from "../images/threed-examples/Professional_Mode_make_the_bottle_apear_in_the_env.mp4";
 import sm6 from "../images/threed-examples/Professional_Mode_make_the_shoes_drop_to_the_grass.mp4";
-import sm7 from "../images/threed-examples/Professional_Mode_make_the_shoes_drop_to_the_grass.mp4";
 import sm8 from "../images/threed-examples/Professional_Mode_take_of_the_cap_of_the_parfume_a.mp4";
 import sm9 from "../images/threed-examples/Standard_Mode_16x9_make_the_oven_and_the_cuboards_o.mp4";
 import sm10 from "../images/threed-examples/Standard_Mode_make_this_video_a_transition_goi.mp4";
@@ -34,7 +33,7 @@ const Animations3D = () => {
       fontSize: '3.5rem',
       marginBottom: '1rem',
       fontWeight: '800',
-      marginLeft:'190px',
+      marginLeft: '190px',
       background: 'linear-gradient(90deg, #00dbde 0%, #fc00ff 100%)',
       WebkitBackgroundClip: 'text',
       WebkitTextFillColor: 'transparent',
@@ -124,7 +123,6 @@ const Animations3D = () => {
     }
   };
 
-  // Project data with videos
   const projects = [
     { id: 1, video: sm1, title: 'Science & Tech Animation' },
     { id: 2, video: sm2, title: 'Professional Cinematic Shot' },
@@ -140,11 +138,7 @@ const Animations3D = () => {
   return (
     <div style={styles.container}>
       <header style={styles.header}>
-        <img 
-          src={logo} 
-          alt="Mavix Logo" 
-          style={styles.logoImg}
-        />
+        <img src={logo} alt="Mavix Logo" style={styles.logoImg} />
         <h1 className='d3h1' style={styles.title}>3D Animations</h1>
         <p style={styles.subtitle}>I japim jetë ideve tuaja me animacione 3D që mbërrijnë drejt në zemër të audiencës!</p>
       </header>
@@ -164,13 +158,13 @@ const Animations3D = () => {
         </p>
 
         <h2 style={styles.sectionTitle}>Portfolio Jonë</h2>
-        <div style={styles.projectGrid}>
+        <div className="project-grid-shift" style={styles.projectGrid}>
           {projects.map((project) => (
             <div className='cards3d' key={project.id} style={styles.projectCard}>
               <video 
                 controls 
                 style={styles.videoPlayer}
-                poster={project.poster} // Add poster frames if available
+                poster={project.poster}
               >
                 <source src={project.video} type="video/mp4" />
                 Your browser does not support the video tag.

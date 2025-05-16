@@ -499,6 +499,8 @@ h1 {
     left: -220px;
   }
 
-
+  .project-grid-shift {
+    margin-left: -20px !important;
+  }
   
 }
