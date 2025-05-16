@@ -106,7 +106,7 @@ export default function Work() {
         textAlign: 'center',
         marginTop: '20px'
       }}>
-          Klikoni për të parë projektet e mëparshme
+          Klikoni për të parë projektet tona
       </div>
     </div>
   );
