@@ -488,11 +488,22 @@ h1 {
     position: relative;
   }
 
-  .bashki{
-    position: relative;
-    top: -180px;
-    background: transparent;
-  }
+.bashki {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 5%;
+  color: white;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  margin-top: 150px;
+  position: relative;
+}
+
+.bashki-img {
+  width: 50%;
+  height: auto;
+}
 
   .kontaktih1{
     position: relative;
@@ -500,7 +511,7 @@ h1 {
   }
 
 
-    .bashki {
+   .bashki {
     flex-direction: column;
     background-image: url('/mavix-enhanced.png');
     background-size: cover;
@@ -511,21 +522,20 @@ h1 {
   }
 
   .bashki-img {
-    display: none;
+    display: none !important;
   }
 
   .bashki .text-box {
-    color: white;
     position: relative;
-    z-index: 1;
+    z-index: 2;
   }
 
   .bashki::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* optional dark overlay */
-    z-index: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* dark overlay for text readability */
+    z-index: 1;
   }
 
 }
